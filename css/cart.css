@@ -12,6 +12,16 @@
     text-align: center;
 }
 
-/* footer{
-   padding-top: 33%; 
-} */
+/* 768px 반응형 구현 */
+@media (max-width: 768px) {
+    .carth1{
+        font-size: 30px;
+    }
+}
+
+/* 390px 반응형 구현 */
+@media (max-width: 390px) {
+    .carth1{
+        font-size: 20px;
+    }
+}

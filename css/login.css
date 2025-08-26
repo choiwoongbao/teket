@@ -135,8 +135,9 @@ input {
   font-weight: 600;
 }
 
-@media (max-width: 768px){
-  .login-wrap{
+/* 768px 반응형 구현 */
+@media (max-width: 768px) {
+  .login-wrap {
     width: 100%;
     max-width: 520px;
     height: auto;
@@ -144,60 +145,104 @@ input {
     padding: 0 16px;
   }
 
-  .login-title img{
-    width: 56px; height: 56px;
-    left: 23%; top: -20px;
+  .login-title img {
+    width: 56px;
+    height: 56px;
+    left: 23%;
+    top: -20px;
   }
 
-  .login-title h1{
-    font-size: 2rem;       
+  .login-title h1 {
+    font-size: 2rem;
     margin-top: 64px;
     margin-bottom: 20px;
   }
 
-  .login-box{
+  .login-box {
     height: auto;
     padding: 20px 0;
     border-radius: 12px;
   }
 
-  .id, .pw{
+  .id,
+  .pw {
     margin: 14px 0 6px 0;
-    padding-left: 5%;
+    padding-left: 21%;
     margin-right: 0;
     font-size: 16px;
     text-align: left;
   }
 
   .login-box input,
-  .inputTypeText{
-    width: 90%;
+  .inputTypeText {
+    width: 60%;
     height: 44px;
     font-size: 16px;
   }
 
-  .login-box h2{
+  .login-box h2 {
     font-size: 14px;
     margin-top: 16px;
   }
 
-  .login-btn{
+  .login-btn {
     width: 100px;
     height: 44px;
     font-size: 16px;
     margin-top: 16px;
   }
 
-  .login-btn > a{ font-size: 16px; }
+  .login-btn > a {
+    font-size: 16px;
+  }
 
-  .login-txt{ font-size: 20px; }
-  .login-system{
+  .login-txt {
+    font-size: 20px;
+  }
+  .login-system {
     gap: 12px;
     margin-top: 16px;
   }
 
-  .login-system button{
+  .login-system button {
     height: 40px;
     font-size: 16px;
+  }
+}
+
+/* 390px 반응형 구현 */
+@media (max-width: 390px) {
+  .login-title img {
+    width: 48px;
+    height: 48px;
+    top: -18px;
+    left: 70px;
+  }
+
+  .login-title h1 {
+    font-size: 1.6rem;
+    margin-top: 56px;
+  }
+
+  .login-box input,
+  .inputTypeText {
+    width: 60%;
+    height: 35px;
+    font-size: 15px;
+  }
+
+  .login-btn {
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  .login-box h2 {
+    font-size: 13px;
+  }
+  
+  .login-system button {
+    height: 35px;
+    font-size: 15px;
   }
 }
