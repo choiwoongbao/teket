@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+@import url("main.css");
+@import url("header.css");
+@import url("footer.css");
+
+.carth1{
+    height: calc(100vh - 150px);
+    margin-top: 5%;
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* footer{
+   padding-top: 33%; 
+} */

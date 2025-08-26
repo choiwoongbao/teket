@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+.new-part {
+  width: 1760px;
+  /* background-color: bisque; */
+}
+
+.new-part h1 {
+  font-size: 40px;
+  margin-top: 40px;
+  margin-left: 80px;
+}
+
+.new-list {
+  margin-top: 40px;
+  margin-left: 80px;
+  width: 275px;
+  height: 366px;
+  display: flex;
+  gap: 95px;
+}
+
+/* new list img */
+.new-list img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.new-list img:hover {
+  opacity: 0.8;
+}
+
+/* new part img txt and price */
+.new-list p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.price-txt {
+  width: 275px;
+}
+
+/* 할인 전 가격 폰트 */
+.price1 {
+  color: #d6d6d6;
+  font-weight: lighter;
+  text-decoration: line-through;
+  font-size: 20px;
+}
+
+/* 할인 후 가격 폰트 */
+.price2 {
+  color: #82bc38;
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+/* new part 768px 반응형 */
+@media (max-width: 768px) {
+  .new-part {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .new-part h1 {
+    font-size: 25px;
+    margin: 20px 0;
+    text-align: left;
+  }
+
+  .new-list {
+    margin: 20px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* 2개가 양쪽에 딱 맞음 */
+  }
+
+  .new-part .new-list a {
+    flex: 0 0 calc(50% - 10px); /* 2개 기준 */
+    box-sizing: border-box;
+  }
+
+  .new-list img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .new-list p {
+    font-size: 18px;
+    white-space: normal;
+    text-align: left;
+  }
+
+  .new-list a:last-child {
+    display: none; /* 768px 이하일 때만 숨김 */
+  }
+
+  .price-txt {
+    text-align: left;
+  }
+
+  .price1,
+  .price2 {
+    font-size: 14px;
+  }
+}
+
+
+/* new part 390px 반응형 */
+@media (max-width: 390px) {
+  .new-part {
+    width: 100%;
+    padding: 0 12px; /* 좌우 여백 살짝 */
+    margin: 0 auto;
+  }
+
+  .new-part h1 {
+    font-size: 20px;
+    margin: 14px 0;
+    text-align: left;
+  }
+
+  .new-list {
+    margin: 12px 0;
+    width: 100%;
+    height: auto;
+    gap: 12px; /* 좁은 화면용 간격 */
+  }
+
+  .new-part .new-list a {
+    flex: 0 0 calc(50% - 6px); /* ← 한 줄에 2장 */
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  .new-list .price-txt {
+    width: 100%; /* 275px → 100% */
+    max-width: 100%;
+  }
+
+  .new-list img {
+    width: 100%;
+    height: auto; /* 비율 유지 */
+    display: block;
+  }
+
+  .new-list p {
+    font-size: 16px;
+    margin-top: 6px;
+    text-align: left;
+    white-space: normal; /* 줄바꿈 허용 */
+  }
+
+  .price-txt {
+    text-align: left;
+  }
+
+  .price1,
+  .price2 {
+    font-size: 13px;
+  }
+}

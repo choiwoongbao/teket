@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/* 메인 이미지 */
+.main-img{
+    max-width: 1760px;
+    margin-top: 4%;
+    margin-left: 80px;
+    /* background-color: aquamarine; */
+}
+
+/* 메인 이미지 width */
+.main-img img{
+    width: 100%;
+    display: block;
+}
+
+/* 메인 이미지 768px 반응형 구현*/
+@media (max-width : 768px) {
+    .main-img{
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    .main-img img{
+        width: 100%;
+        padding-top: 4%;
+        height: auto;
+    }
+}
+
+
+/* 메인 이미지 390px 반응형 구현*/
+@media (max-width : 390px) {
+    .main-img{
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    .main-img img{
+        width: 100%;
+        padding-top: 4%;
+        height: auto;
+    }
+}

@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/* banner part */
+.banner-part {
+  display: flex;
+  max-width: 100%;
+  background-color: #82bc38;
+  margin-bottom: 5%;
+  margin-left: 0.5%;
+}
+
+/* banner left, right part */
+.banner-left,
+.banner-right {
+  width: 50%;
+  padding: 1%;
+  margin: 1%;
+  background-color: #fff;
+}
+
+/* banner left */
+.banner-left {
+  margin-right: -0.2%;
+}
+
+.left-img > a {
+  position: relative;
+}
+
+/* banner img */
+.banner-left img {
+  width: 100%;
+  display: block;
+  /* filter: brightness(1.1); */
+}
+
+.banner-left p {
+  z-index: 99;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 30px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.left-img > a:hover p {
+  opacity: 1;
+}
+
+.left-img a:hover img {
+  filter: brightness(0.8);
+}
+
+/* banner right img */
+.banner-right img {
+  width: 100%;
+  display: block;
+  /* filter: brightness(1.1); */
+}
+
+.banner-right p {
+  z-index: 99;
+  position: absolute;
+  bottom: 200px;
+  right: 370px;
+  color: #fff;
+  font-size: 30px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.right-img > a:hover p {
+  opacity: 1;
+}
+
+.right-img a:hover img {
+  filter: brightness(0.8);
+}
+
+/* banner 768px 반응형 구현 */
+@media (max-width: 768px) {
+  .banner-part {
+    flex-wrap: wrap; /* 줄바꿈 허용 */
+    margin-top: 5%;
+  }
+
+  .left-img > a,
+  .right-img > a {
+    position: relative;
+    display: block;
+  }
+
+  .banner-left,
+  .banner-right {
+    width: calc(50% - 10px);
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .banner-left img,
+  .banner-right img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* 텍스트는 이미지 아래 중앙 */
+  .banner-left p,
+  .banner-right p {
+    width: 100%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 1.3;
+    font-size: 18px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+/* banner 768px 반응형 구현 */
+@media (max-width: 390px) {
+  .banner-left p,
+  .banner-right p {
+    font-size: 13px;
+  }
+}

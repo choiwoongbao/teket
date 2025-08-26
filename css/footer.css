@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+footer {
+  position: relative;
+  max-width: 100%;
+  min-width: 100%;
+  height: 70px;
+  display: flex;
+}
+
+.footer-wrap {
+  width: 100%;
+  height: 70px;
+  justify-content: space-between;
+  background-color: #82bc38;
+}
+
+.footer-list li a {
+  font-size: 2rem;
+  color: #000000;
+  font-weight: bold;
+}
+
+.footer-list {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.footer-list > li {
+  width: calc(100% / 4);
+  padding-left: 15%;
+  padding-top: 1%;
+  text-align: center;
+  /* padding-top: 10px; */
+  position: relative;
+}
+
+.footer-list > li > a {
+  width: 100%;
+  position: relative;
+  font-size: 2rem;
+  color: #000000;
+  font-weight: bold;
+}
+
+.footer-list li a:hover {
+  color: #ffd700;
+}
+
+.info-list {
+  width: 1200px;
+  position: absolute;
+  top: 6px;
+  left: 210px;
+  background-color: #82bc38;
+  padding: 5px 0px;
+  z-index: 99;
+  display: none;
+  text-align: left;
+}
+
+.info-list .address {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.footer-list li:first-child:hover .info-list {
+  display: block;
+}
+
+.footer-site {
+  padding-top: 1%;
+  padding-right: 2%;
+  height: 70px;
+  font-size: 25px;
+  color: #000000;
+  background-color: #82bc38;
+}
+
+.footer-site span {
+  color: #fff;
+  font-weight: normal;
+}
+
+.footer-site a {
+  color: #000000;
+}
+
+/* fooer 768px 반응형 구현 */
+@media (max-width: 768px) {
+  /* 메뉴 안 보이게 */
+  .footer-wrap {
+    display: none;
+  }
+
+  /* 저작권만 오른쪽 끝 */
+  .footer-site {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px 20px;
+    background: #82bc38;
+    color: #000;
+  }
+
+  .footer-site span {
+    color: #fff;
+  }
+}

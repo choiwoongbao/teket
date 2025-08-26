@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/* best acc */
+.best-acc {
+  width: 1760px;
+}
+
+.acc-list {
+  margin-top: 40px;
+  margin-left: 80px;
+  /* height: 366px; */
+  display: flex;
+  gap: 95px;
+  margin-bottom: 100px;
+}
+
+.acc-list a {
+  width: 275px;
+  /* 줄어들지 않게 유지 */
+  flex-shrink: 0;
+}
+
+/* best list img */
+.acc-list img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.acc-list img:hover {
+  opacity: 0.8;
+}
+
+/* best part p태그 */
+.acc-tille {
+  font-size: 40px;
+  margin-top: 120px;
+  margin-bottom: 40px;
+  margin-left: 80px;
+}
+
+/* new part img txt and price */
+.acc-list p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.price-txt {
+  width: 275px;
+}
+
+/* SOLD OUT 강조 */
+.price3 {
+  color: #d62828;
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+/* new part 768px 반응형 */
+@media (max-width: 768px) {
+  .best-acc {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .best-acc h1 {
+    font-size: 25px;
+    margin: 30px 0;
+    text-align: left;
+  }
+
+  .acc-list {
+    margin: 20px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* 2개가 양쪽에 딱 맞음 */
+  }
+
+  .best-acc .acc-list a {
+    flex: 0 0 calc(50% - 10px); /* 2개 기준 */
+    box-sizing: border-box;
+  }
+
+  .acc-list img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .acc-list p {
+    font-size: 18px;
+    white-space: normal;
+    text-align: left;
+  }
+
+  .acc-list a:last-child {
+    display: none; /* 768px 이하일 때만 숨김 */
+  }
+
+  .price-txt {
+    text-align: left;
+  }
+
+  .price3 {
+    color:#d62828;
+    font-weight: bold;
+    font-size: 14px !important;
+  }
+
+  .price1,
+  .price2 {
+    font-size: 14px;
+  }
+}
+
+
+/* new part 390px 반응형 */
+@media (max-width: 390px) {
+.best-acc {
+    display: none; /* 768px 이하일 때만 숨김 */
+  }
+}
