@@ -134,3 +134,70 @@ input {
   color: #fff;
   font-weight: 600;
 }
+
+@media (max-width: 768px){
+  .login-wrap{
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin: 60px auto;
+    padding: 0 16px;
+  }
+
+  .login-title img{
+    width: 56px; height: 56px;
+    left: 23%; top: -20px;
+  }
+
+  .login-title h1{
+    font-size: 2rem;       
+    margin-top: 64px;
+    margin-bottom: 20px;
+  }
+
+  .login-box{
+    height: auto;
+    padding: 20px 0;
+    border-radius: 12px;
+  }
+
+  .id, .pw{
+    margin: 14px 0 6px 0;
+    padding-left: 5%;
+    margin-right: 0;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .login-box input,
+  .inputTypeText{
+    width: 90%;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .login-box h2{
+    font-size: 14px;
+    margin-top: 16px;
+  }
+
+  .login-btn{
+    width: 100px;
+    height: 44px;
+    font-size: 16px;
+    margin-top: 16px;
+  }
+
+  .login-btn > a{ font-size: 16px; }
+
+  .login-txt{ font-size: 20px; }
+  .login-system{
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .login-system button{
+    height: 40px;
+    font-size: 16px;
+  }
+}

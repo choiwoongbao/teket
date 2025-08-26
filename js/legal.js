@@ -2,7 +2,7 @@ window.addEventListener("load", function () {
   const nav = document.querySelector(".menu-list");
   const headerBg = document.querySelector(".header-bg");
   const navItems = nav.querySelectorAll(".menu-list > li");
-  
+
   navItems.forEach((item, index) => {
     // li 안쪽 전체 영역에 마우스 들어올 때
     item.addEventListener("mouseenter", function (e) {
@@ -45,5 +45,16 @@ window.addEventListener("load", function () {
   hamburger.addEventListener("click", function () {
     mobile.classList.toggle("show");
   });
-});
 
+  // 마케팅 이벤트 클릭 시
+  const overlay = this.document.querySelector(".overlay");
+  const openBtn = this.document.querySelector(".openBtn");
+  const closeBtn = this.document.querySelector(".closeBtn");
+
+  openBtn.addEventListener("click", function () {
+    overlay.classList.add("open");
+  });
+  closeBtn.addEventListener("click", function () {
+    overlay.classList.remove("open");
+  });
+});
