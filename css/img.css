@@ -19,8 +19,11 @@
 }
 /* popup 이벤트 */
 .openBtn {
-  position: fixed;
+  /* position: absolute;
   top: 10%;
+  left: 30%; */
+  position: absolute;
+  top: 80px;
   left: 30px;
   border-radius: 10px;
   border: none;
@@ -59,15 +62,17 @@
 .popup img {
   width: 100%;
   display: block;
+  padding-left: 39%;
+  padding-top: 2%;
 }
 
 .closeBtn {
   position: absolute;
-  top: 15px;
-  right: 1%;
+  top: 16px;
+  right: 0;
   width: 5%;
   color: #111;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: bold;
   border: none;
   background: transparent;
@@ -114,23 +119,22 @@
   }
 }
 
-
 /* popup 이벤트 768px 반응형 구현*/
-@media (max-width:768px){
-  .openBtn{
+@media (max-width: 768px) {
+  .openBtn {
     display: none;
   }
-  .overlay{
+  .overlay {
     display: none;
   }
 }
 
 /* popup 이벤트 390px 반응형 구현*/
-@media (max-width:390px){
-  .openBtn{
+@media (max-width: 390px) {
+  .openBtn {
     display: none;
   }
-  .overlay{
+  .overlay {
     display: none;
   }
 }
