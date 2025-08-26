@@ -3,3 +3,25 @@
 @import url("main.css");
 @import url("header.css");
 @import url("footer.css");
+
+      /* support page  */
+.support-wrap{
+    background-color: #bc7838;
+}
+
+.su-left{
+    margin-left: 7%;
+    color: #fff;
+}
+
+.su-left p{
+    font-size: 20px;
+    text-align: left;
+}
+
+.su-left input{
+    width: 10%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+}
