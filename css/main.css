@@ -3,15 +3,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
 
 /* css 파일 연결하기  */
-@import url("./header.css");
-@import url("/css/img.css");
-@import url("./new_part.css");
-@import url("./best_part.css");
-@import url("./best_acc.css");
-@import url("./banner.css");
-@import url("./footer.css");
-@import url("./cart.css");
-@import url("./legal.css");
+@import url("header.css");
+@import url("img.css");
+@import url("new_part.css");
+@import url("best_part.css");
+@import url("best_acc.css");
+@import url("banner.css");
+@import url("footer.css");
+@import url("cart.css");
+@import url("legal.css");
 
 
 * {
