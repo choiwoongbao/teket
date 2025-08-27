@@ -98,3 +98,81 @@ width: calc(100% / 5);
 .page-list li:first-child{
     text-decoration: underline;
 }
+
+
+/* 768px 반응형 구현 */
+@media (max-width: 768px){
+  .shop-all{
+    max-width: 100%;
+    width: 100%;
+    margin-top: 24px;
+    padding: 0 12px;
+  }
+
+  /* flex → grid 로 전환하여 3열 강제 */
+  .shop1, .shop2, .shop3, .shop4{
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 24px 0 0;
+    margin-left: 0 !important;   /* 데스크톱의 8% 제거 */
+    justify-content: initial;    /* flex 정렬값 영향 제거 */
+  }
+
+  /* 카드 폭 고정(420px) 완전 해제 */
+  .shop1 a, .shop2 a, .shop3 a, .shop4 a{
+    width: 100% !important;
+    max-width: none !important;
+    flex: initial !important;    /* flex-basis 잔재 제거 */
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* 이미지는 비율 유지 */
+  .shop1 img, .shop2 img, .shop3 img, .shop4 img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* 텍스트는 줄바꿈 허용 + 크기 축소 */
+  .shop1 p, .shop2 p, .shop3 p, .shop4 p{
+    font-size: 16px;
+    white-space: normal;         /* nowrap 덮어쓰기 */
+    margin-top: 6px;
+  }
+  .price1, .price2{ font-size: 14px; }
+
+  /* 페이지네이션 중앙 유지 */
+  .prev-next{ margin: 40px 0; gap: 16px; }
+  .page-list{ width: auto; gap: 12px; margin:0; padding:0; list-style:none; }
+  .page-list li{ width: auto; }
+  .page-list > li > a{ padding: 0 6px; }
+}
+
+/* 320px 반응형 구현 */
+@media (max-width: 390px){
+  .shop1, .shop2, .shop3, .shop4{
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px;                 /* 화면이 좁으니 간격만 살짝 줄임 */
+  }
+
+  /* 카드 폭/고정값 잔재 제거(안전빵) */
+  .shop1 a, .shop2 a, .shop3 a, .shop4 a{
+    width: 100% !important;
+    max-width: none !important;
+    flex: initial !important;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* 텍스트 조금 더 컴팩트하게 */
+  .shop1 p, .shop2 p, .shop3 p, .shop4 p{
+    font-size: 13px;
+    line-height: 1.3;
+    white-space: normal;     /* 줄바꿈 허용 */
+    margin-top: 4px;
+  }
+  .price1, .price2{ font-size: 12px; }
+  .shop-all{ padding: 0 8px; }
+}
